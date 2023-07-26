@@ -370,12 +370,11 @@
 
 	&__item-popup--show {
 		max-height: 100rem !important;
-		opacity: 1 !important;
 	}
 
 	&__item-popup {
 		max-height: 0;
-		transition: max-height 0.7s;
+		transition: 0.4s;
 		overflow: hidden;
 		position: absolute;
 		padding: 1.2rem 3.2rem;
@@ -385,7 +384,6 @@
 		top: 14.5rem;
 		right: 17.5rem;
 		z-index: 10;
-		opacity: 0;
 		box-shadow: 2rem 1.5rem 4rem 0rem rgba(103, 110, 133, 0.1);
 
 		input {

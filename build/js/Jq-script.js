@@ -348,20 +348,20 @@ function cropImgFuncCanvas(event) {
 					let img = document.createElement('img');
 					img.id = 'image';
 					img.src = event.target.result;
-					img.width = 305;
-					img.height = 305;
+					img.width = 315;
+					img.height = 315;
 					// clean result before
 					result.innerHTML = '';
 					// append new image
 					result.appendChild(img);
 					// init cropper
 					cropperCanvas = new Cropper(img, {
-						zoomable: false,
+						zoomable: true,
 						viewMode: 0,
 						background: false,
 						rotatable: true,
-						minContainerWidth: 305,
-						minContainerHeight: 305,
+						minContainerWidth: 315,
+						minContainerHeight: 315,
 						ready: function () {
 							croppable = true;
 						},
@@ -999,3 +999,102 @@ jQuery(function ($) {
 		}
 	});
 });
+
+
+
+let cropperCanvasImg = '';
+let camanCanvasImg = {};
+let imagesExtentionsCanvasImg = ["image/png","image/jpg","image/jpeg","image/gif"];
+function cropImgFuncCanvasProd(event) {
+	let result = document.querySelector('#img-modal-canvas');
+	let fileNameCanvas = "";
+	if (event.target.files.length) {
+		// start file reader
+		if(imagesExtentionsCanvas.includes(event.target.files[0].type)) {
+			console.log(event);
+			fileNameCanvas = event.target.files[0].name;
+			const reader = new FileReader();
+			reader.onload = function(event) {
+			
+				if(event.target.result){
+					// create new image
+					let img = document.createElement('img');
+					img.id = 'image';
+					img.src = event.target.result;
+					img.width = 305;
+					img.height = 305;
+					// clean result before
+					result.innerHTML = '';
+					// append new image
+					result.appendChild(img);
+					// init cropper
+					cropperCanvas = new Cropper(img, {
+						zoomable: false,
+						viewMode: 0,
+						background: false,
+						rotatable: true,
+						minContainerWidth: 305,
+						minContainerHeight: 305,
+						ready: function () {
+							croppable = true;
+						},
+						
+						ready: function (event) {
+							this.cropperCanvas = cropperCanvas;
+						},
+					});
+	
+					document.getElementsByClassName(
+						'img-modal',
+					)[0].classList.add('active');
+
+
+		
+				}
+			};
+			reader.readAsDataURL(event.target.files[0]);
+		} else {
+			$(".cover-modal-error").addClass("active");
+		}
+	
+		 
+
+
+		
+
+		
+	}
+
+	camanCanvas.cropper = cropperCanvas;
+	camanCanvas.getData = function () {
+			
+			cropperCanvas
+					.getCroppedCanvas({
+						maxWidth: 4096,
+						maxHeight: 4096,
+						fillColor: '#fff',
+						imageSmoothingEnabled: true,
+						imageSmoothingQuality: 'high',
+					})
+					.toBlob((blob) => {
+						console.log(fileNameCanvas);
+						console.log(blob);
+						var fileBlob = new File([blob], fileNameCanvas, {
+							type: blob.type,
+							lastModified: Date.now(),
+						});
+						var dt = new DataTransfer();
+						dt.items.add(fileBlob);
+						var filelist = dt.files;
+						$('#input-img-modal-ajax')[0].files = filelist;
+						document.querySelector("#input-img-modal-ajax").dispatchEvent(new CustomEvent("upload"));
+
+						//document.querySelector(".avatar-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
+					});
+	};
+	document.querySelector('.product-img__file-upload-btn')
+	.addEventListener('update', camanCanvas.getData);
+	
+
+
+}

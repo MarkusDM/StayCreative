@@ -1,0 +1,50 @@
+.photo-collage {
+    padding-top: 23rem;
+    padding-bottom: 10rem;
+    position: relative;
+    &__link {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8rem;
+        position: fixed;
+        top: 40%;
+        &-circle {
+            width: 7.7rem;
+            height: 7.7rem;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            margin-right: 7rem;
+            border-radius: 50%;
+            background: #fff;
+
+            svg {
+                width: 2rem;
+                height: 1rem;
+            }
+        }
+
+        span {
+            color:  #383742;
+            font-family: 'Austin Cyr',sans-serif;
+            font-size: 3.7rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 0.74px;
+        }
+    }
+
+    &__image {
+        height: 87rem;
+        border-radius: 4rem;
+        display: block;
+        margin-bottom: 6rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4rem;
+        }
+    }
+}

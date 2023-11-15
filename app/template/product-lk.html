@@ -372,7 +372,7 @@
         <div class="product-photo">
             <!--  --> 
             <div class="product-card__title">
-                <span>Загрузите обложку продукта</span>
+                <span>Загрузите фото продукта</span>
                 
                  <div class="explanation">
                      <svg
@@ -429,6 +429,49 @@
                
             
             </form>
+        </div>
+        <div class="product-img">
+            <div class="product-card__title">
+                <span>Загрузите обложку продукта</span>
+                
+                 <div class="explanation">
+                     <svg
+                         xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 20 21"
+                         fill="none">
+                         <path
+                             d="M0 10.002C0 15.5248 4.47715 20.002 10 20.002C15.5228 20.002 20 15.5248 20 10.002C20 4.47911 15.5228 0.00195312 10 0.00195312C4.47715 0.00195312 0 4.47911 0 10.002Z"
+                             fill="#DE755E" />
+                         <path
+                             d="M9.65997 11.002V10.792C9.65997 10.112 10.08 9.75198 10.5 9.46198C10.91 9.18198 11.3199 8.82199 11.3199 8.16199C11.3199 7.24199 10.58 6.50195 9.65997 6.50195C8.73997 6.50195 8 7.24199 8 8.16199"
+                             stroke="white"
+                             stroke-width="1.5"
+                             stroke-linecap="round"
+                             stroke-linejoin="round" />
+                         <path
+                             d="M9.65566 13.3926H9.66466"
+                             stroke="white"
+                             stroke-width="1.5"
+                             stroke-linecap="round"
+                             stroke-linejoin="round" />
+                     </svg>
+                     <p class="explanation__info">
+                        Данное фото будет отображаться в каталоге
+                     </p>
+                 </div>
+             </div>
+
+             <div class="product-img__block">
+               
+                    <div class="product-img__file">
+                        <input type="file" class="product-img__file-input" id="product-img__file-upload-file" onchange="cropImgFuncCanvasProd(event)">
+                        <label for="product-img__file-upload-file"></label>
+                        <label class="product-img__file-upload-btn" for="product-img__file-upload-file">
+
+                    </div>
+                    
+             </div>
+            
         </div>
         <div class="product-m-loading">
         
@@ -626,3 +669,6 @@
         </div>
     </div>
 </div>
+
+
+

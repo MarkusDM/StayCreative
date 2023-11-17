@@ -337,6 +337,7 @@
         border-radius: 4rem;
         padding: 1.4rem 2.4rem;
         position: relative;
+        
         font-weight: 500;
         font-size: 2rem;
         line-height: 2.4rem;
@@ -354,6 +355,16 @@
         // }
     }
 
+
+    .input-file-list-item--d {
+        background:  #FFDBD4;
+        border: 0.1rem solid #FFDBD4;
+        transition: 0.2s;
+    }
+
+
+   
+
     /* Disabled */
     .input-file input[type="file"]:disabled + span {
         background-color: #eee;
@@ -363,7 +374,55 @@
     .input-file-list {
     }
     .input-file-list-item {
+        
     }
+
+
+    .input-file-list-animation {
+        position: absolute;
+        content: "";
+        width: 2.4rem;
+        height: 2.4rem;
+        right: 2.4rem;
+        font-size: 0;
+        background-image: url(../img/inputclock.svg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: inline-block;
+
+        svg {
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            right: -0.4rem;
+            top: -0.3rem;
+            animation: paginationAnimation 3s linear;
+        }
+
+
+      
+      
+
+        .svg-white {
+            opacity: 1;
+            stroke-dasharray: 140;
+            stroke-dashoffset: 0;
+            animation: paginationAnimation 3s linear;
+          }
+    }
+
+
+
+    @keyframes paginationAnimation {   
+        from {     
+            stroke-dashoffset: 140;
+            
+        }   
+        to {
+            stroke-dashoffset: 0;
+           
+         }
+      }
  
 
     &__start-search {

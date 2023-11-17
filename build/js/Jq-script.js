@@ -240,14 +240,14 @@ $(document).ready(function () {
 
 	$(document).mouseup(function (e) {
 		var container = $(".profile-user__lists");
-		if (container.has(e.target).length === 0){
+		if (container.has(e.target).length === 0) {
 			container.hide();
 		}
 	});
 
 	$(document).mouseup(function (e) {
 		var container = $(".profile-header__lists");
-		if (container.has(e.target).length === 0){
+		if (container.has(e.target).length === 0) {
 			container.hide();
 		}
 	});
@@ -295,24 +295,67 @@ $(document).ready(function () {
 	//  закачка файла
 });
 
-var dt = new DataTransfer();
 
-$('.input-file input[type=file]').on('change', function () {
-	let $files_list = $(this).closest('.input-file').next();
 
-	for (var i = 0; i < this.files.length; i++) {
-		let new_file_input =
-			'<div class="input-file-list-item">' +
+let dt = new DataTransfer();
+const filesInput = document.querySelector(".input-file input[type=file]");
+const inputFileLists = document.querySelector('.input-file-list');
+
+
+filesInput.addEventListener("change", () => {
+	const files = filesInput.files;
+
+	for (let i = 0; i < files.length; i++) {
+		const file = files[i];
+
+
+
+		inputFileLists.innerHTML += '<div class="input-file-list-item input-file-list-item--d">' +
 			'<span class="input-file-list-name">' +
-			this.files.item(i).name +
+			file.name +
 			'</span>' +
-			'<a href="#" onclick="removeFilesItem(this); return false;" class="input-file-list-remove">x</a>' +
-			'</div>';
-		$files_list.append(new_file_input);
-		dt.items.add(this.files.item(i));
+			'<a style=" display: none;" onclick="removeFilesItem(this); return false;" class="input-file-list-remove">x</a>' +
+			'<div class="input-file-list-animation"><div class="input-file-list-animation-circle"><svg  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="svg-ops"d="M1 13C1 19.6274 6.37258 25 13 25C19.2907 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13Z" stroke="white" stroke-width="0.3" /><path class="svg-white" d="M1 13C1 19.6274 6.37258 25 13 25C19.2907 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13Z" stroke="#000" stroke-width="0.3" /></svg></div><div class="input-file-list-image"><img src="./img/inputclock.svg" alt=""></div><div>' +'</div>';
+
+		const reader = new FileReader();
+
+		reader.addEventListener("load", () => {
+			const allLists = inputFileLists.getElementsByClassName('input-file-list-item');
+			const inputFileListItem = allLists[allLists.length - 1];
+			const inputFileListRemove = inputFileListItem.querySelector('.input-file-list-remove');
+			const inputFileListAnimation = inputFileListItem.querySelector('.input-file-list-animation');
+			inputFileListAnimation.style.display = 'none';
+			inputFileListItem.classList.remove('input-file-list-item--d');
+			inputFileListRemove.style.display = 'inline-block';
+		});
+
+		reader.readAsDataURL(file);
+		dt.items.add(file);
 	}
-	this.files = dt.files;
+
+	filesInput.files = dt.files;
+	console.log(dt.files);
 });
+
+
+// var dt = new DataTransfer();
+
+// $('.input-file input[type=file]').on('change', function () {
+// 	let $files_list = $(this).closest('.input-file').next();
+
+// 	for (var i = 0; i < this.files.length; i++) {
+// 		let new_file_input =
+// 			'<div class="input-file-list-item">' +
+// 			'<span class="input-file-list-name">' +
+// 			this.files.item(i).name +
+// 			'</span>' +
+// 			'<a href="#" onclick="removeFilesItem(this); return false;" class="input-file-list-remove">x</a>' +
+// 			'</div>';
+// 		$files_list.append(new_file_input);
+// 		dt.items.add(this.files.item(i));
+// 	}
+// 	this.files = dt.files;
+// });
 
 function removeFilesItem(target) {
 	let name = $(target).prev().text();
@@ -331,19 +374,19 @@ function removeFilesItem(target) {
 
 let cropperCanvas = '';
 let camanCanvas = {};
-let imagesExtentionsCanvas = ["image/png","image/jpg","image/jpeg","image/gif"];
+let imagesExtentionsCanvas = ["image/png", "image/jpg", "image/jpeg", "image/gif"];
 function cropImgFuncCanvas(event) {
 	let result = document.querySelector('#canvas');
 	let fileNameCanvas = "";
 	if (event.target.files.length) {
 		// start file reader
-		if(imagesExtentionsCanvas.includes(event.target.files[0].type)) {
+		if (imagesExtentionsCanvas.includes(event.target.files[0].type)) {
 			console.log(event);
 			fileNameCanvas = event.target.files[0].name;
 			const reader = new FileReader();
-			reader.onload = function(event) {
-			
-				if(event.target.result){
+			reader.onload = function (event) {
+
+				if (event.target.result) {
 					// create new image
 					let img = document.createElement('img');
 					img.id = 'image';
@@ -365,73 +408,73 @@ function cropImgFuncCanvas(event) {
 						ready: function () {
 							croppable = true;
 						},
-						
+
 						ready: function (event) {
 							this.cropperCanvas = cropperCanvas;
 						},
 					});
-	
+
 					document.getElementsByClassName(
 						'cover-modal__center',
 					)[0].style.display = 'block';
-	
+
 					document.getElementsByClassName(
 						'cover-modal__center-one',
 					)[0].style.display = 'none';
 					document.getElementsByClassName(
 						'cover-modal__block-prev',
 					)[0].style.display = 'flex';
-						
-				
-	
-	
-				
-					
+
+
+
+
+
+
 				}
 			};
 			reader.readAsDataURL(event.target.files[0]);
 		} else {
 			$(".cover-modal-error").addClass("active");
 		}
-	
-		 
 
 
-		
 
-		
+
+
+
+
 	}
 
 	camanCanvas.cropper = cropperCanvas;
 	camanCanvas.getData = function () {
-			
-			cropperCanvas
-					.getCroppedCanvas({
-						maxWidth: 4096,
-						maxHeight: 4096,
-						fillColor: '#fff',
-						imageSmoothingEnabled: true,
-						imageSmoothingQuality: 'high',
-					})
-					.toBlob((blob) => {
-						console.log(fileNameCanvas);
-						console.log(blob);
-						var fileBlob = new File([blob], fileNameCanvas, {
-							type: blob.type,
-							lastModified: Date.now(),
-						});
-						var dt = new DataTransfer();
-						dt.items.add(fileBlob);
-						var filelist = dt.files;
-						$('#input-to-ajax-canvas')[0].files = filelist;
-						document.querySelector("#input-to-ajax-canvas").dispatchEvent(new CustomEvent("upload"));
 
-						//document.querySelector(".avatar-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
-					});
+		cropperCanvas
+			.getCroppedCanvas({
+				maxWidth: 4096,
+				maxHeight: 4096,
+				fillColor: '#fff',
+				imageSmoothingEnabled: true,
+				imageSmoothingQuality: 'high',
+			})
+			.toBlob((blob) => {
+				console.log(fileNameCanvas);
+				console.log(blob);
+				var fileBlob = new File([blob], fileNameCanvas, {
+					type: blob.type,
+					lastModified: Date.now(),
+				});
+				var dt = new DataTransfer();
+				dt.items.add(fileBlob);
+				var filelist = dt.files;
+				$('#input-to-ajax-canvas')[0].files = filelist;
+				document.querySelector("#input-to-ajax-canvas").dispatchEvent(new CustomEvent("upload"));
+
+				//document.querySelector(".avatar-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
+			});
 	};
 	document.querySelector('.avatar-modal__save-btn')
-	.addEventListener('update', camanCanvas.getData);
-	
+		.addEventListener('update', camanCanvas.getData);
+
 
 
 }
@@ -440,21 +483,21 @@ function cropImgFuncCanvas(event) {
 
 let cropperAvatar = '';
 let camanAvatar = {};
-let imagesExtentions = ["image/png","image/jpg","image/jpeg","image/gif"];
+let imagesExtentions = ["image/png", "image/jpg", "image/jpeg", "image/gif"];
 function cropImgFunc(event) {
 	let result = document.querySelector('#canvas-avatar');
-    let  imgPreview = document.querySelector('#preImg');
+	let imgPreview = document.querySelector('#preImg');
 	let imgPreviewTwo = document.querySelector('#preImgTwo');
 	let fileNameAvatar = "";
 	if (event.target.files.length) {
 		// start file reader
-		if(imagesExtentions.includes(event.target.files[0].type)) {
+		if (imagesExtentions.includes(event.target.files[0].type)) {
 			console.log(event);
 			fileNameAvatar = event.target.files[0].name;
 			const reader = new FileReader();
-			reader.onload = function(event) {
-			
-				if(event.target.result){
+			reader.onload = function (event) {
+
+				if (event.target.result) {
 					// create new image
 					let img = document.createElement('img');
 					img.id = 'image';
@@ -470,7 +513,7 @@ function cropImgFunc(event) {
 						dragMode: 'move',
 						aspectRatio: 1,
 						autoCrop: true,
-					
+
 						autoCropArea: 0.68,
 						center: false,
 						cropBoxMovable: false,
@@ -478,83 +521,83 @@ function cropImgFunc(event) {
 						guides: false,
 						minContainerWidth: 305,
 						minContainerHeight: 305,
-					
-	
-						
-						ready: function(event) {
-							
+
+
+
+						ready: function (event) {
+
 							this.cropperAvatar = cropperAvatar;
 						},
 						crop: function (event) {
-								if(!this.cropperAvatar) this.cropperAvatar = cropperAvatar;
-								let imgSrc = this.cropperAvatar				
+							if (!this.cropperAvatar) this.cropperAvatar = cropperAvatar;
+							let imgSrc = this.cropperAvatar
 								.getCroppedCanvas({
 									width: 170,
 									height: 170
 								}).toDataURL('image/png');
-								console.log(imgPreview);
-								imgPreview.src = imgSrc;
-								imgPreviewTwo.src = imgSrc;
-													
+							console.log(imgPreview);
+							imgPreview.src = imgSrc;
+							imgPreviewTwo.src = imgSrc;
+
 						},
 					});
-	
-	
+
+
 					document.getElementsByClassName(
-											'avatar-modal__center',
-										)[0].style.display = 'block';
-										document.getElementsByClassName(
-											'avatar-modal__center-one',
-										)[0].style.display = 'none';
-										document.getElementsByClassName(
-											'avatar-modal__block-prev',
-										)[0].style.display = 'flex';
-					
+						'avatar-modal__center',
+					)[0].style.display = 'block';
+					document.getElementsByClassName(
+						'avatar-modal__center-one',
+					)[0].style.display = 'none';
+					document.getElementsByClassName(
+						'avatar-modal__block-prev',
+					)[0].style.display = 'flex';
+
 				}
 			};
 			reader.readAsDataURL(event.target.files[0]);
 		} else {
 			$(".cover-modal-error").addClass("active");
 		}
-	
-		 
 
 
-		
 
-		
+
+
+
+
 	}
 
 	camanAvatar.cropper = cropperAvatar;
 	camanAvatar.getData = function () {
-			console.log('sasdsad');
-			cropperAvatar
-					.getCroppedCanvas({
-						maxWidth: 4096,
-						maxHeight: 4096,
-						fillColor: '#fff',
-						imageSmoothingEnabled: true,
-						imageSmoothingQuality: 'high',
-					})
-					.toBlob((blob) => {
-						console.log(fileNameAvatar);
-						console.log(blob);
-						var fileBlob = new File([blob], fileNameAvatar, {
-							type: blob.type,
-							lastModified: Date.now(),
-						});
-						var dt = new DataTransfer();
-						dt.items.add(fileBlob);
-						var filelist = dt.files;
-						$('#input-to-ajax')[0].files = filelist;
-						document.querySelector("#input-to-ajax").dispatchEvent(new CustomEvent("upload"));
+		console.log('sasdsad');
+		cropperAvatar
+			.getCroppedCanvas({
+				maxWidth: 4096,
+				maxHeight: 4096,
+				fillColor: '#fff',
+				imageSmoothingEnabled: true,
+				imageSmoothingQuality: 'high',
+			})
+			.toBlob((blob) => {
+				console.log(fileNameAvatar);
+				console.log(blob);
+				var fileBlob = new File([blob], fileNameAvatar, {
+					type: blob.type,
+					lastModified: Date.now(),
+				});
+				var dt = new DataTransfer();
+				dt.items.add(fileBlob);
+				var filelist = dt.files;
+				$('#input-to-ajax')[0].files = filelist;
+				document.querySelector("#input-to-ajax").dispatchEvent(new CustomEvent("upload"));
 
-						//document.querySelector(".avatar-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
-					});
+				//document.querySelector(".avatar-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
+			});
 	};
 	document.querySelector('.avatar-modal__save-btn')
-	.addEventListener('update', camanAvatar.getData);
-	
+		.addEventListener('update', camanAvatar.getData);
+
 
 
 }
@@ -836,7 +879,7 @@ new AirDatepicker('#lk-m__calendar', {
 	inline: true,
 });
 
-$(document).on("click", "#reset-filter", function(){
+$(document).on("click", "#reset-filter", function () {
 	airCalendar.clear();
 });
 
@@ -848,7 +891,7 @@ jQuery(document).ready(function ($) {
 	var dtItem = new DataTransfer();
 	var itemPreviewTemplate = $(".template-wrap .item.template").clone();
 	itemPreviewTemplate.removeClass('template');
-	
+
 
 	$('#addImages').on('change', function () {
 		var files = this.files;
@@ -872,7 +915,7 @@ jQuery(document).ready(function ($) {
 
 		this.files = dtItem.files;
 		console.log(dtItem.items);
-		
+
 	});
 
 	// Создание превью
@@ -898,7 +941,7 @@ jQuery(document).ready(function ($) {
 	// Удаление фотографий
 	imagesList.on('click', '.delete-link', function () {
 		var item = $(this).closest('.item'),
-		id = item.data('id');
+			id = item.data('id');
 
 		// delete queue[id];
 		for (let i = 0; i < dtItem.items.length; i++) {
@@ -1004,19 +1047,19 @@ jQuery(function ($) {
 
 let cropperCanvasImg = '';
 let camanCanvasImg = {};
-let imagesExtentionsCanvasImg = ["image/png","image/jpg","image/jpeg","image/gif"];
+let imagesExtentionsCanvasImg = ["image/png", "image/jpg", "image/jpeg", "image/gif"];
 function cropImgFuncCanvasProd(event) {
 	let result = document.querySelector('#img-modal-canvas');
 	let fileNameCanvas = "";
 	if (event.target.files.length) {
 		// start file reader
-		if(imagesExtentionsCanvas.includes(event.target.files[0].type)) {
+		if (imagesExtentionsCanvas.includes(event.target.files[0].type)) {
 			console.log(event);
 			fileNameCanvas = event.target.files[0].name;
 			const reader = new FileReader();
-			reader.onload = function(event) {
-			
-				if(event.target.result){
+			reader.onload = function (event) {
+
+				if (event.target.result) {
 					// create new image
 					let img = document.createElement('img');
 					img.id = 'image';
@@ -1038,63 +1081,63 @@ function cropImgFuncCanvasProd(event) {
 						ready: function () {
 							croppable = true;
 						},
-						
+
 						ready: function (event) {
 							this.cropperCanvas = cropperCanvas;
 						},
 					});
-	
+
 					document.getElementsByClassName(
 						'img-modal',
 					)[0].classList.add('active');
 
 
-		
+
 				}
 			};
 			reader.readAsDataURL(event.target.files[0]);
 		} else {
 			$(".cover-modal-error").addClass("active");
 		}
-	
-		 
 
 
-		
 
-		
+
+
+
+
 	}
 
 	camanCanvas.cropper = cropperCanvas;
 	camanCanvas.getData = function () {
-			
-			cropperCanvas
-					.getCroppedCanvas({
-						maxWidth: 4096,
-						maxHeight: 4096,
-						fillColor: '#fff',
-						imageSmoothingEnabled: true,
-						imageSmoothingQuality: 'high',
-					})
-					.toBlob((blob) => {
-						console.log(fileNameCanvas);
-						console.log(blob);
-						var fileBlob = new File([blob], fileNameCanvas, {
-							type: blob.type,
-							lastModified: Date.now(),
-						});
-						var dt = new DataTransfer();
-						dt.items.add(fileBlob);
-						var filelist = dt.files;
-						$('#input-img-modal-ajax')[0].files = filelist;
-						document.querySelector("#input-img-modal-ajax").dispatchEvent(new CustomEvent("upload"));
 
-						//document.querySelector(".avatar-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
-					});
+		cropperCanvas
+			.getCroppedCanvas({
+				maxWidth: 4096,
+				maxHeight: 4096,
+				fillColor: '#fff',
+				imageSmoothingEnabled: true,
+				imageSmoothingQuality: 'high',
+			})
+			.toBlob((blob) => {
+				console.log(fileNameCanvas);
+				console.log(blob);
+				var fileBlob = new File([blob], fileNameCanvas, {
+					type: blob.type,
+					lastModified: Date.now(),
+				});
+				var dt = new DataTransfer();
+				dt.items.add(fileBlob);
+				var filelist = dt.files;
+				$('#input-img-modal-ajax')[0].files = filelist;
+				document.querySelector("#input-img-modal-ajax").dispatchEvent(new CustomEvent("upload"));
+
+				//document.querySelector(".avatar-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
+			});
 	};
 	document.querySelector('.product-img__file-upload-btn')
-	.addEventListener('update', camanCanvas.getData);
-	
+		.addEventListener('update', camanCanvas.getData);
+
 
 
 }

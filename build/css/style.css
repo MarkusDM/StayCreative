@@ -6270,8 +6270,50 @@ main {
     font-size: 2rem;
     line-height: 2.4rem;
     color: #fff; }
+  .lk-m .input-file-list-item--d {
+    background: #FFDBD4;
+    border: 0.1rem solid #FFDBD4;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
   .lk-m .input-file input[type="file"]:disabled + span {
     background-color: #eee; }
+  .lk-m .input-file-list-animation {
+    position: absolute;
+    content: "";
+    width: 2.4rem;
+    height: 2.4rem;
+    right: 2.4rem;
+    font-size: 0;
+    background-image: url(../img/inputclock.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: inline-block; }
+    .lk-m .input-file-list-animation svg {
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      right: -0.4rem;
+      top: -0.3rem;
+      -webkit-animation: paginationAnimation 3s linear;
+              animation: paginationAnimation 3s linear; }
+    .lk-m .input-file-list-animation .svg-white {
+      opacity: 1;
+      stroke-dasharray: 140;
+      stroke-dashoffset: 0;
+      -webkit-animation: paginationAnimation 3s linear;
+              animation: paginationAnimation 3s linear; }
+
+@-webkit-keyframes paginationAnimation {
+  from {
+    stroke-dashoffset: 140; }
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes paginationAnimation {
+  from {
+    stroke-dashoffset: 140; }
+  to {
+    stroke-dashoffset: 0; } }
   .lk-m__start-search {
     position: relative; }
     .lk-m__start-search input {

@@ -1,0 +1,26 @@
+.loading-modal {
+   
+    &__loading {
+        display: block;
+        position: relative;
+        z-index: 3;
+    }
+    .loader {
+        position: relative;
+        top: initial;
+        left: initial;
+        transform: initial;
+    }
+
+    &__title {
+        width: 57rem;
+        strong {
+            display: block;
+            color: #383742;
+            text-align: center;
+            font-size: 3.7rem;
+            font-style: normal;
+            font-weight: 700;
+        }
+    }
+}

@@ -22931,6 +22931,28 @@ input:checked ~ .contacts__question-item-content {
          object-fit: cover;
       border-radius: 4rem; }
 
+.loading-modal__loading {
+  display: block;
+  position: relative;
+  z-index: 3; }
+
+.loading-modal .loader {
+  position: relative;
+  top: initial;
+  left: initial;
+  -webkit-transform: initial;
+          transform: initial; }
+
+.loading-modal__title {
+  width: 57rem; }
+  .loading-modal__title strong {
+    display: block;
+    color: #383742;
+    text-align: center;
+    font-size: 3.7rem;
+    font-style: normal;
+    font-weight: 700; }
+
 @media only all and (max-width: 48em) {
   html {
     font-size: 1.3333333333vw;
@@ -37607,4 +37629,14 @@ input:checked ~ .contacts__question-item-content {
     width: 8rem;
     height: 8rem;
     min-width: 8rem;
-    min-height: 8rem; } }
+    min-height: 8rem; }
+  .img-modal__center-block {
+    width: 100%;
+    height: 100%;
+    min-height: 63rem;
+    max-height: 63rem;
+    min-width: 100%;
+    max-width: 100%; }
+  .img-modal__center-title {
+    font-size: 4.7rem;
+    margin-bottom: 6rem; } }

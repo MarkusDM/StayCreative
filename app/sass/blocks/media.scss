@@ -19405,4 +19405,22 @@
 		min-width: 8rem;
 		min-height: 8rem;
 	}
+
+
+
+	.img-modal {
+		&__center-block {
+			width: 100%;
+			height: 100%;
+			min-height: 63rem;
+			max-height: 63rem;
+			min-width: 100%;
+			max-width: 100%;
+		}
+
+		&__center-title {
+			font-size: 4.7rem;
+			margin-bottom: 6rem;
+		}
+	}
 }

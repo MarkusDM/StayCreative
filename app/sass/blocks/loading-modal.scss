@@ -1,5 +1,15 @@
 .loading-modal {
-   
+    background: rgba(56, 55, 66, 0.25);
+	display: none;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	justify-content: center;
+	align-items: center;
     &__loading {
         display: block;
         position: relative;
@@ -23,4 +33,51 @@
             font-weight: 700;
         }
     }
+
+
+    &__container {
+		position: relative;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+		margin: 0 auto;
+	}
+
+	&__close {
+		width: 7.7rem;
+		height: 7.7rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #ffffff;
+		border-radius: 50%;
+		margin-bottom: 2rem;
+		margin-left: auto;
+
+		img {
+			width: 1.8rem;
+			height: 1.8rem;
+		}
+	}
+
+	&__box {
+		background: #ffffff;
+		border-radius: 5.5rem;
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 3.2rem;
+
+		padding: 6rem 8rem;
+		border-radius: 5.5rem;
+		background-color: #fff;
+	}
+}
+
+.loading-modal.active {
+    display: flex;
 }

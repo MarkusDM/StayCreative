@@ -1141,3 +1141,11 @@ function cropImgFuncCanvasProd(event) {
 
 
 }
+
+
+$('.loading-modal__close').click(function () {
+	$('.loading-modal').removeClass('active');
+});
+
+
+

@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 40.5rem;
-	height: 48rem;
+	height: 37rem;
 	overflow: hidden;
 	position: relative;
 	cursor: pointer;
@@ -214,13 +214,12 @@
 	}
 
 	&__info {
-		position: absolute;
-		bottom: 0;
+	
 		display: flex;
 		justify-content: space-between;
 		padding: 2.3rem 2.2rem;
 		background-color: #fff;
-		border-radius: 3rem 3rem 0 0;
+		border-radius: 0 0 3rem 3rem ;
 		z-index: 3;
 		height: 9.9rem;
 	}
@@ -340,8 +339,8 @@
 
 	&__img {
 		width: 40.5rem;
-		height: 48rem;
-		border-radius: 3rem;
+		height: 27rem;
+		border-radius: 3rem 3rem 0rem 0rem;
 		overflow: hidden;
 		z-index: 2;
 		transition: 0.4s;

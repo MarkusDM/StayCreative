@@ -391,8 +391,8 @@ function cropImgFuncCanvas(event) {
 					let img = document.createElement('img');
 					img.id = 'image';
 					img.src = event.target.result;
-					img.width = 315;
-					img.height = 315;
+					img.width = 837;
+					img.height = 282;
 					// clean result before
 					result.innerHTML = '';
 					// append new image
@@ -403,8 +403,8 @@ function cropImgFuncCanvas(event) {
 						viewMode: 0,
 						background: false,
 						rotatable: true,
-						minContainerWidth: 315,
-						minContainerHeight: 315,
+						minContainerWidth: 837,
+						minContainerHeight: 282,
 						ready: function () {
 							croppable = true;
 						},
@@ -469,10 +469,10 @@ function cropImgFuncCanvas(event) {
 				$('#input-to-ajax-canvas')[0].files = filelist;
 				document.querySelector("#input-to-ajax-canvas").dispatchEvent(new CustomEvent("upload"));
 
-				//document.querySelector(".avatar-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
+				//document.querySelector(".cover-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
 			});
 	};
-	document.querySelector('.avatar-modal__save-btn')
+	document.querySelector('.shop-cover-modal__save-btn, .cover-modal__save-btn')
 		.addEventListener('update', camanCanvas.getData);
 
 
@@ -595,7 +595,7 @@ function cropImgFunc(event) {
 				//document.querySelector(".avatar-modal__save-btn").dispatchEvent(new CustomEvent("update")) - триггер события, проверка
 			});
 	};
-	document.querySelector('.avatar-modal__save-btn')
+	document.querySelector('.avatar-modal__save-btn, .shop-avatar-modal__save-btn')
 		.addEventListener('update', camanAvatar.getData);
 
 

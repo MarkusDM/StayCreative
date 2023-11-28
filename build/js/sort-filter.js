@@ -186,13 +186,25 @@ if (filterBtn && filter) {
 }
 
 //открытие детальной модалки filter
-const filterDetBtns = document.querySelectorAll('#filter-det-btn');
-const filterDet = document.querySelector('.modal--filter-det');
+const filterDetBtns = document.querySelectorAll('#filter-det-btn-tags');
+const filterDet = document.querySelector('.modal--filter-det.tags');
 
 if (filterDet && filterDetBtns) {
 	filterDetBtns.forEach((btn) => {
 		btn.addEventListener('click', () => {
 			filterDet.classList.add(activeClass);
+		});
+	});
+}
+
+//открытие детальной модалки filter
+const filterDetBtns1 = document.querySelectorAll('#filter-det-btn-files');
+const filterDet1 = document.querySelector('.modal--filter-det.files');
+
+if (filterDet1 && filterDetBtns1) {
+	filterDetBtns1.forEach((btn) => {
+		btn.addEventListener('click', () => {
+			filterDet1.classList.add(activeClass);
 		});
 	});
 }

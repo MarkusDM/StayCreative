@@ -1892,7 +1892,7 @@ main {
     padding-top: 6rem;
     -webkit-transition: 0.6s ease;
     transition: 0.6s ease;
-    top: -60rem;
+    top: -200rem;
     position: absolute;
     border-radius: 0 0 3rem 3rem;
     -webkit-box-shadow: 1rem 1rem 3.1rem rgba(160, 161, 164, 0.19);
@@ -2406,22 +2406,23 @@ main {
     left: 50%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
-    top: 4.7rem; }
+    top: 3.7rem; }
     .cat-product__img img {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
-      object-fit: cover; }
+      object-fit: cover;
+      border-radius: 4rem; }
   .cat-product__border {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 2; }
+    z-index: 2;
+    top: 0;
+    display: none; }
     .cat-product__border img {
       width: 100%;
-      height: 100%;
-      -o-object-fit: contain;
-      object-fit: contain; }
+      height: 100%; }
   .cat-product__number {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14359,7 +14360,10 @@ input:checked ~ .contacts__question-item-content {
     left: 0rem; }
     .publick-profile__profile-background-img img {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      border-radius: 3rem;
+      -o-object-fit: cover;
+         object-fit: cover; }
   .publick-profile__profile-photo {
     margin-top: auto;
     border-radius: 18.6rem;
@@ -14369,7 +14373,9 @@ input:checked ~ .contacts__question-item-content {
     z-index: 2;
     margin-right: 2.2rem; }
     .publick-profile__profile-photo img {
-      width: 100%; }
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; }
   .publick-profile__profile-info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -29252,6 +29258,10 @@ input:checked ~ .contacts__question-item-content {
       width: 100%;
       height: 47rem;
       padding: 3rem; }
+    .cat-product__images {
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0); }
     .cat-product__image-block {
       width: 27.4rem;
       height: 22.4rem;
@@ -31409,7 +31419,7 @@ input:checked ~ .contacts__question-item-content {
     .cat-product__img {
       position: absolute;
       width: 29.0867rem;
-      height: 30.2696rem;
+      height: 24.2696rem;
       z-index: 1;
       left: 50%;
       -webkit-transform: translate(-50%);
@@ -31422,7 +31432,9 @@ input:checked ~ .contacts__question-item-content {
       overflow: hidden;
       border-radius: 6rem; }
     .cat-product__images {
-      left: 0; }
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+              transform: translate(-50%, 0); }
     .cat-product__image-block {
       width: 27.4rem;
       height: 22.4rem;

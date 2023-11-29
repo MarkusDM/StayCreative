@@ -391,8 +391,8 @@ function cropImgFuncCanvas(event) {
 					let img = document.createElement('img');
 					img.id = 'image';
 					img.src = event.target.result;
-					img.width = 837;
-					img.height = 282;
+					img.width = 315;
+					img.height = 315;
 					// clean result before
 					result.innerHTML = '';
 					// append new image
@@ -400,11 +400,12 @@ function cropImgFuncCanvas(event) {
 					// init cropper
 					cropperCanvas = new Cropper(img, {
 						zoomable: true,
-						viewMode: 0,
+						
+						viewMode: 3,
 						background: false,
 						rotatable: true,
-						minContainerWidth: 837,
-						minContainerHeight: 282,
+						// minContainerWidth: 315,
+						// minContainerHeight: 315,
 						ready: function () {
 							croppable = true;
 						},
@@ -504,16 +505,17 @@ function cropImgFunc(event) {
 					img.src = event.target.result;
 					img.width = 305;
 					img.height = 305;
+					
 					// clean result before
 					result.innerHTML = '';
 					// append new image
 					result.appendChild(img);
 					// init cropper
 					cropperAvatar = new Cropper(img, {
+						
 						dragMode: 'move',
 						aspectRatio: 1,
 						autoCrop: true,
-
 						autoCropArea: 0.68,
 						center: false,
 						cropBoxMovable: false,
@@ -521,9 +523,7 @@ function cropImgFunc(event) {
 						guides: false,
 						minContainerWidth: 305,
 						minContainerHeight: 305,
-
-
-
+						showZoomer: false,
 						ready: function (event) {
 
 							this.cropperAvatar = cropperAvatar;

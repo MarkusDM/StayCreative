@@ -7599,6 +7599,10 @@ main {
   max-width: 40.5rem;
   max-height: 40.5rem; }
 
+.avatar-modal #canvas-avatar {
+  max-width: 40.5rem;
+  max-height: 40.5rem; }
+
 .avatar-modal.active {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11271,7 +11275,8 @@ img {
     display: -ms-flexbox;
     display: flex; }
   .product-card__head {
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    position: relative; }
   .product-card__map {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11336,16 +11341,21 @@ img {
       border-radius: 4rem;
       height: 100%; }
   .product-card__item-icons {
-    top: 4rem;
-    right: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
-    height: 17.6rem;
-    width: 9.5rem; }
+    bottom: 0;
+    right: 0; }
   .product-card__item-icon-backgraund {
     right: 4rem;
     top: 4rem;
     width: 9.5rem;
-    height: 17.6rem; }
+    height: 17.6rem;
+    display: none; }
     .product-card__item-icon-backgraund path {
       width: 100%;
       height: 100%; }
@@ -11833,10 +11843,7 @@ img {
     letter-spacing: 0.02em;
     color: #383742; }
   .product-card__item-heart-icon {
-    top: 0.9rem;
-    right: 0.9rem;
-    position: absolute;
-    width: 7.6rem;
+    width: 7.7rem;
     height: 7.7rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11847,16 +11854,13 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-radius: 5rem; }
+    border-radius: 5rem;
+    background: #fff;
+    margin-right: 1rem; }
     .product-card__item-heart-icon img {
       width: 2rem; }
-    .product-card__item-heart-icon--active {
-      background-color: #fff !important; }
   .product-card__item-bookmarks-icon {
-    top: 9rem;
-    right: 0.9rem;
-    position: absolute;
-    width: 7.6rem;
+    width: 7.7rem;
     height: 7.7rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -11867,15 +11871,16 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-radius: 5rem; }
+    border-radius: 5rem;
+    background: #fff; }
     .product-card__item-bookmarks-icon img {
       width: 2rem; }
   .product-card__heart-popup {
-    top: 2.5rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    right: 10.5rem;
+    top: -6.5rem;
+    right: 2rem;
     padding: 1.4rem 1.7rem;
     position: absolute;
     background-color: #fff;
@@ -11896,9 +11901,7 @@ img {
       font-size: 1.6rem;
       line-height: 2rem;
       white-space: nowrap;
-      color: #383742;
-      -webkit-box-shadow: 2rem 1.5rem 4rem rgba(103, 110, 133, 0.1);
-              box-shadow: 2rem 1.5rem 4rem rgba(103, 110, 133, 0.1); }
+      color: #383742; }
     .product-card__heart-popup::after {
       content: '';
       width: 1.6rem;
@@ -11906,15 +11909,15 @@ img {
       z-index: 10;
       background-color: #fff;
       position: absolute;
-      right: -0.7rem;
+      bottom: -0.7rem;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
   .product-card__bookmarks-popup {
-    bottom: 2.5rem;
+    top: -6.5rem;
+    right: -2rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    right: 10.5rem;
     padding: 1.4rem 1.7rem;
     position: absolute;
     background-color: #fff;
@@ -11934,7 +11937,8 @@ img {
       z-index: 10;
       background-color: #fff;
       position: absolute;
-      right: -0.7rem;
+      bottom: -0.7rem;
+      right: 5rem;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
     .product-card__bookmarks-popup span {
@@ -11944,9 +11948,7 @@ img {
       font-size: 1.6rem;
       line-height: 2rem;
       white-space: nowrap;
-      color: #383742;
-      -webkit-box-shadow: 2rem 1.5rem 4rem rgba(103, 110, 133, 0.1);
-              box-shadow: 2rem 1.5rem 4rem rgba(103, 110, 133, 0.1); }
+      color: #383742; }
   .product-card__description-box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -17375,7 +17377,8 @@ img {
     display: -ms-flexbox;
     display: flex; }
   .product-card__head {
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    position: relative; }
   .product-card__map {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -17440,16 +17443,21 @@ img {
       border-radius: 4rem;
       height: 100%; }
   .product-card__item-icons {
-    top: 4rem;
-    right: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
-    height: 17.6rem;
-    width: 9.5rem; }
+    bottom: 0;
+    right: 0; }
   .product-card__item-icon-backgraund {
     right: 4rem;
     top: 4rem;
     width: 9.5rem;
-    height: 17.6rem; }
+    height: 17.6rem;
+    display: none; }
     .product-card__item-icon-backgraund path {
       width: 100%;
       height: 100%; }
@@ -17937,10 +17945,7 @@ img {
     letter-spacing: 0.02em;
     color: #383742; }
   .product-card__item-heart-icon {
-    top: 0.9rem;
-    right: 0.9rem;
-    position: absolute;
-    width: 7.6rem;
+    width: 7.7rem;
     height: 7.7rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -17951,16 +17956,13 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-radius: 5rem; }
+    border-radius: 5rem;
+    background: #fff;
+    margin-right: 1rem; }
     .product-card__item-heart-icon img {
       width: 2rem; }
-    .product-card__item-heart-icon--active {
-      background-color: #fff !important; }
   .product-card__item-bookmarks-icon {
-    top: 9rem;
-    right: 0.9rem;
-    position: absolute;
-    width: 7.6rem;
+    width: 7.7rem;
     height: 7.7rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -17971,15 +17973,16 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border-radius: 5rem; }
+    border-radius: 5rem;
+    background: #fff; }
     .product-card__item-bookmarks-icon img {
       width: 2rem; }
   .product-card__heart-popup {
-    top: 2.5rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    right: 10.5rem;
+    top: -6.5rem;
+    right: 2rem;
     padding: 1.4rem 1.7rem;
     position: absolute;
     background-color: #fff;
@@ -18000,9 +18003,7 @@ img {
       font-size: 1.6rem;
       line-height: 2rem;
       white-space: nowrap;
-      color: #383742;
-      -webkit-box-shadow: 2rem 1.5rem 4rem rgba(103, 110, 133, 0.1);
-              box-shadow: 2rem 1.5rem 4rem rgba(103, 110, 133, 0.1); }
+      color: #383742; }
     .product-card__heart-popup::after {
       content: '';
       width: 1.6rem;
@@ -18010,15 +18011,15 @@ img {
       z-index: 10;
       background-color: #fff;
       position: absolute;
-      right: -0.7rem;
+      bottom: -0.7rem;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
   .product-card__bookmarks-popup {
-    bottom: 2.5rem;
+    top: -6.5rem;
+    right: -2rem;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    right: 10.5rem;
     padding: 1.4rem 1.7rem;
     position: absolute;
     background-color: #fff;
@@ -18038,7 +18039,8 @@ img {
       z-index: 10;
       background-color: #fff;
       position: absolute;
-      right: -0.7rem;
+      bottom: -0.7rem;
+      right: 5rem;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
     .product-card__bookmarks-popup span {
@@ -18048,9 +18050,7 @@ img {
       font-size: 1.6rem;
       line-height: 2rem;
       white-space: nowrap;
-      color: #383742;
-      -webkit-box-shadow: 2rem 1.5rem 4rem rgba(103, 110, 133, 0.1);
-              box-shadow: 2rem 1.5rem 4rem rgba(103, 110, 133, 0.1); }
+      color: #383742; }
   .product-card__description-box {
     display: -webkit-box;
     display: -ms-flexbox;

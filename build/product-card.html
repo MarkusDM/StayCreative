@@ -1318,6 +1318,43 @@
 						<a class="product-card__map-item">Шрифты</a>
 						<a class="product-card__map-item">Шрифты с засечками</a>
 					</div>
+					<div class="product-card__item-icons">
+						<!-- product-card__item-heart-icon--active необходим для выделения активной иконки, если элемент добавлен. -->
+						<div
+							class="product-card__item-heart-icon product-card__item-heart-icon--active">
+							<img
+								src="./img/icon/heart-icon.svg"
+								alt="" />
+						</div>
+
+						<button
+							class="product-card__item-bookmarks-icon"
+							id="add-to-bookmarks">
+							<img
+								src="./img/product-card/bookmarks-icon.svg"
+								alt="" />
+						</button>
+
+						<div class="product-card__heart-popup">
+							<span>Добавить в избранное</span>
+						</div>
+						<div class="product-card__bookmarks-popup">
+							<span>Добавить в закладки</span>
+						</div>
+
+						<svg
+							class="product-card__item-icon-backgraund"
+							viewBox="0 0 95 176"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
+								fill="white"
+								fill-opacity="0.5" />
+						</svg>
+					</div>
+
 					<p class="product-card__title">Семейство шрифтов Seasons</p>
 				</div>
 
@@ -1333,43 +1370,7 @@
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<!-- product-card__item-heart-icon--active необходим для выделения активной иконки, если элемент добавлен. -->
-												<div
-													class="product-card__item-heart-icon product-card__item-heart-icon--active">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
-
+											
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -1377,40 +1378,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<div class="product-card__item-heart-icon">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
+											
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -1418,40 +1386,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<div class="product-card__item-heart-icon">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
+											
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -1459,40 +1394,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<div class="product-card__item-heart-icon">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
+											
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -1500,40 +1402,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<div class="product-card__item-heart-icon">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
+											
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -1541,40 +1410,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<div class="product-card__item-heart-icon">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
+										
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -1582,40 +1418,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<div class="product-card__item-heart-icon">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
+											
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -1623,40 +1426,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<div class="product-card__item-heart-icon">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
+											
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -1664,40 +1434,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<div class="product-card__item-heart-icon">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
+											
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -1705,40 +1442,7 @@
 									</div>
 									<div class="swiper-slide">
 										<div class="product-card__item-main-img">
-											<div class="product-card__item-icons">
-												<div class="product-card__item-heart-icon">
-													<img
-														src="./img/icon/heart-icon.svg"
-														alt="" />
-												</div>
-
-												<button
-													class="product-card__item-bookmarks-icon"
-													id="add-to-bookmarks">
-													<img
-														src="./img/product-card/bookmarks-icon.svg"
-														alt="" />
-												</button>
-
-												<div class="product-card__heart-popup">
-													<span>Добавить в избранное</span>
-												</div>
-												<div class="product-card__bookmarks-popup">
-													<span>Добавить в закладки</span>
-												</div>
-
-												<svg
-													class="product-card__item-icon-backgraund"
-													viewBox="0 0 95 176"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														fill-rule="evenodd"
-														clip-rule="evenodd"
-														d="M95 47C95 21.0426 73.9574 -9.19802e-07 48 -2.05444e-06L47 -2.09815e-06C21.0426 -3.23278e-06 -9.19806e-07 21.0426 -2.05444e-06 47C-2.57268e-06 58.8559 4.38982 69.6865 11.6327 77.9551C16.2588 83.2363 16.2588 92.7637 11.6327 98.0449C4.38982 106.313 -5.12053e-06 117.144 -5.63877e-06 129C-6.7734e-06 154.957 21.0426 176 47 176L48 176C73.9574 176 95 154.957 95 129C95 117.144 90.6102 106.314 83.3673 98.0449C78.7412 92.7637 78.7412 83.2363 83.3673 77.9551C90.6102 69.6865 95 58.8559 95 47Z"
-														fill="white"
-														fill-opacity="0.5" />
-												</svg>
-											</div>
+											
 											<img
 												src="./img/product-card/card-item-sample-img.png"
 												id="main-slider-img" />
@@ -4567,8 +4271,10 @@
                     </div>
                     <div class="cover-modal__center" style="display: none;">
                         <div class="cover-modal__center-title">Выберите область для обложки профиля</div>
-                        
-                        <div id="canvas" style="max-width: 100%;"></div>
+                        <div class="cover-modal__center-block">
+							<div id="canvas" ></div>
+						</div>
+                       
                         <button class="red-btn"><span>Сохронить</span></button>
                         <input type="file" id="input-to-ajax-canvas">
                     </div>

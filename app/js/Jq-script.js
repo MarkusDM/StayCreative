@@ -658,6 +658,31 @@ $('.modal-follow__close').click(function () {
 });
 
 
+
+$(document).on(
+	'change',
+	'.profile-password__checkbox > input[type=checkbox]',
+	function () {
+		var $this = $(this),
+			$chks = $(document.getElementsByName(this.name)),
+			$all = $chks.filter('.chk-all');
+
+		if ($this.hasClass('chk-all')) {
+			$chks.prop('checked', $this.prop('checked'));
+		} else
+			switch ($chks.filter(':checked').length) {
+				case +$all.prop('checked'):
+					$all.prop('checked', false).prop('indeterminate', false);
+					break;
+				case $chks.length - !!$this.prop('checked'):
+					$all.prop('checked', true).prop('indeterminate', false);
+					break;
+				default:
+					$all.prop('indeterminate', true);
+			}
+	},
+);
+
 //  табы лк продажи
 
 $('.lk-sales__item').click(function () {
@@ -1009,6 +1034,9 @@ $(document).on(
 	},
 );
 
+
+
+
 jQuery(function ($) {
 	$('.product-select__span').click(function () {
 		$(this).toggleClass('active');
@@ -1125,27 +1153,5 @@ $('.loading-modal__close').click(function () {
 });
 
 
-$(document).on(
-	'change',
-	'.profile-password__checkbox > input[type=checkbox]',
-	function () {
-		var $this = $(this),
-			$chks = $(document.getElementsByName(this.name)),
-			$all = $chks.filter('.chk-all');
 
-		if ($this.hasClass('chk-all')) {
-			$chks.prop('checked', $this.prop('checked'));
-		} else
-			switch ($chks.filter(':checked').length) {
-				case +$all.prop('checked'):
-					$all.prop('checked', false).prop('indeterminate', false);
-					break;
-				case $chks.length - !!$this.prop('checked'):
-					$all.prop('checked', true).prop('indeterminate', false);
-					break;
-				default:
-					$all.prop('indeterminate', true);
-			}
-	},
-);
 

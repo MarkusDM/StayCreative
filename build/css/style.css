@@ -9411,8 +9411,8 @@ main {
       .cart__empty-img img {
         width: 100%;
         height: 100%;
-        -o-object-fit: contain;
-        object-fit: contain; }
+        -o-object-fit: cover;
+           object-fit: cover; }
     .cart__empty-massage {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -9455,6 +9455,14 @@ main {
         font-weight: 700;
         line-height: 1;
         letter-spacing: 0.04rem; }
+  .cart__item-img {
+    width: 35.6rem;
+    height: 17.5rem; }
+    .cart__item-img img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      border-radius: 3rem; }
   .cart__title {
     font-family: 'Austin Cyr';
     font-style: normal;
@@ -9542,7 +9550,7 @@ main {
       width: 1.5rem;
       height: 1.5rem; }
   .cart__item-img {
-    width: 24.6rem;
+    width: 34.6rem;
     height: 17.5rem;
     margin-right: 4rem;
     border-radius: 3rem; }
@@ -13840,20 +13848,51 @@ input:checked ~ .contacts__question-item-content {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-bottom: 8.4rem; }
+  .store__profile-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #de755e;
+    padding: 2.6rem 4rem;
+    border-radius: 100rem;
+    margin-bottom: 2rem; }
+    .store__profile-btn span {
+      color: #fff;
+      font-size: 2rem;
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.04rem; }
   .store__profile {
     border-radius: 3rem;
     width: 133.5rem;
-    height: 42.8rem;
+    height: auto;
     background: #fff;
     overflow: hidden;
     position: relative;
     padding: 5.2rem;
+    padding-top: 26rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end; }
+  .store__profile-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   .store__profile-background-img {
     width: 100%;
     height: 24.9rem;
@@ -13863,17 +13902,24 @@ input:checked ~ .contacts__question-item-content {
     left: 0rem; }
     .store__profile-background-img img {
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      border-radius: 3rem; }
   .store__profile-photo {
     margin-top: auto;
     border-radius: 18.6rem;
     width: 18.6rem;
     height: 18.6rem;
+    min-height: 18.6rem;
+    min-width: 18.6rem;
     border: 0.3rem solid #fff;
     z-index: 2;
     margin-right: 2.2rem; }
     .store__profile-photo img {
-      width: 100%; }
+      width: 100%;
+      height: 100%;
+      border-radius: 50%; }
   .store__profile-info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -13886,7 +13932,8 @@ input:checked ~ .contacts__question-item-content {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-right: auto; }
+    margin-right: auto;
+    max-width: 70rem; }
   .store__profile-status {
     color: #a0a1a4;
     font-size: 2rem;
@@ -14342,17 +14389,26 @@ input:checked ~ .contacts__question-item-content {
   .publick-profile__profile {
     border-radius: 3rem;
     width: 133.5rem;
-    height: 42.8rem;
+    height: auto;
     background: #fff;
     overflow: hidden;
     position: relative;
     padding: 5.2rem;
+    padding-top: 28rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .publick-profile__profile-btns {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: auto;
+    padding-bottom: 2rem; }
+    .publick-profile__profile-btns .link {
+      margin-right: 2rem; }
   .publick-profile__profile-background-img {
     width: 100%;
     height: 24.9rem;
@@ -14371,6 +14427,8 @@ input:checked ~ .contacts__question-item-content {
     border-radius: 18.6rem;
     width: 18.6rem;
     height: 18.6rem;
+    min-width: 18.6rem;
+    min-height: 18.6rem;
     border: 0.3rem solid #fff;
     z-index: 2;
     margin-right: 2.2rem; }
@@ -14390,7 +14448,9 @@ input:checked ~ .contacts__question-item-content {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-top: auto;
+    padding-bottom: 2rem; }
   .publick-profile__profile-status {
     color: #a0a1a4;
     font-size: 2rem;
@@ -15513,8 +15573,8 @@ input:checked ~ .contacts__question-item-content {
       .cart__empty-img img {
         width: 100%;
         height: 100%;
-        -o-object-fit: contain;
-        object-fit: contain; }
+        -o-object-fit: cover;
+           object-fit: cover; }
     .cart__empty-massage {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -15557,6 +15617,14 @@ input:checked ~ .contacts__question-item-content {
         font-weight: 700;
         line-height: 1;
         letter-spacing: 0.04rem; }
+  .cart__item-img {
+    width: 35.6rem;
+    height: 17.5rem; }
+    .cart__item-img img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      border-radius: 3rem; }
   .cart__title {
     font-family: 'Austin Cyr';
     font-style: normal;
@@ -15644,7 +15712,7 @@ input:checked ~ .contacts__question-item-content {
       width: 1.5rem;
       height: 1.5rem; }
   .cart__item-img {
-    width: 24.6rem;
+    width: 34.6rem;
     height: 17.5rem;
     margin-right: 4rem;
     border-radius: 3rem; }
@@ -22894,7 +22962,7 @@ input:checked ~ .contacts__question-item-content {
             align-items: center;
     margin-bottom: 8rem;
     position: fixed;
-    top: 40%; }
+    top: 30%; }
     .photo-collage__link-circle {
       width: 7.7rem;
       height: 7.7rem;
@@ -27123,8 +27191,8 @@ input:checked ~ .contacts__question-item-content {
       display: none; }
     .cart__item-img {
       border-radius: 4rem;
-      width: 18rem;
-      height: 18rem;
+      width: 20rem;
+      height: 23rem;
       margin-right: 2rem;
       -o-object-fit: cover;
       object-fit: cover; }
@@ -34520,8 +34588,7 @@ input:checked ~ .contacts__question-item-content {
       .store__profile-photo img {
         width: 100%; }
     .store__profile-name {
-      gap: 2rem;
-      margin-left: 2.9rem; }
+      gap: 2rem; }
       .store__profile-name strong {
         color: #383742;
         font-size: 5rem;
@@ -34530,6 +34597,16 @@ input:checked ~ .contacts__question-item-content {
         font-weight: 700;
         line-height: normal;
         letter-spacing: 0.1rem; }
+    .store__profile-btn {
+      width: 100%;
+      padding: 3.8rem 17.1rem; }
+      .store__profile-btn span {
+        color: #fff;
+        font-family: Gilroy;
+        font-size: 2.8rem;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: .056rem; }
     .store__profile-rating {
       gap: 1.2rem; }
       .store__profile-rating span {
@@ -37198,8 +37275,9 @@ input:checked ~ .contacts__question-item-content {
       letter-spacing: 0.056rem; }
     .follow-btn__icon {
       display: none;
-      width: 5rem;
-      height: auto; }
+      width: 4rem;
+      height: auto;
+      margin-left: 1rem; }
     .follow-btn .active {
       display: -webkit-box;
       display: -ms-flexbox;

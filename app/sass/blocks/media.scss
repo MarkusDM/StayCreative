@@ -5506,8 +5506,8 @@
 
 		&__item-img {
 			border-radius: 4rem;
-			width: 18rem;
-			height: 18rem;
+			width: 20rem;
+			height: 23rem;
 			margin-right: 2rem;
 			-o-object-fit: cover;
 			object-fit: cover;
@@ -15294,7 +15294,7 @@
 
 		&__profile-name {
 			gap: 2rem;
-			margin-left: 2.9rem;
+			
 			strong {
 				color: #383742;
 				font-size: 5rem;
@@ -15303,6 +15303,20 @@
 				font-weight: 700;
 				line-height: normal;
 				letter-spacing: 0.1rem;
+			}
+		}
+
+		&__profile-btn {
+			width: 100%;
+			padding: 3.8rem 17.1rem;
+
+			span {
+				color: #fff;
+				font-family: Gilroy;
+				font-size: 2.8rem;
+				font-style: normal;
+				font-weight: 700;
+				letter-spacing: .056rem;
 			}
 		}
 
@@ -18749,8 +18763,9 @@
 
 		&__icon {
 			display: none;
-			width: 5rem;
+			width: 4rem;
 			height: auto;
+			margin-left: 1rem;
 		}
 
 		.active {

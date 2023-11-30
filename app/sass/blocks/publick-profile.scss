@@ -10,14 +10,24 @@
 	&__profile {
 		border-radius: 3rem;
 		width: 133.5rem;
-		height: 42.8rem;
+		height: auto;
 		background: #fff;
 		overflow: hidden;
 		position: relative;
 		padding: 5.2rem;
-
+		padding-top: 28rem;
 		display: flex;
-		align-items: flex-end;
+	
+	}
+
+	&__profile-btns {
+		display: flex;
+		align-items:center;
+		margin-top: auto;
+		padding-bottom: 2rem;
+		.link {
+			margin-right: 2rem;
+		}
 	}
 
 	&__profile-background-img {
@@ -41,6 +51,8 @@
 		border-radius: 18.6rem;
 		width: 18.6rem;
 		height: 18.6rem;
+		min-width: 18.6rem;
+    	min-height: 18.6rem;
 		border: 0.3rem solid #fff;
 		z-index: 2;
 		margin-right: 2.2rem;
@@ -59,6 +71,8 @@
 		align-items: flex-start;
 		flex-direction: column;
 		margin-right: auto;
+		margin-top: auto;
+		padding-bottom: 2rem;
 	}
 
 	&__profile-status {

@@ -5583,6 +5583,15 @@ main {
   display: -ms-flexbox;
   display: flex; }
 
+.modal--product-det .product-card__head {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial; }
+
 .lk-register {
   margin-bottom: 15rem; }
   .lk-register__wrapper {

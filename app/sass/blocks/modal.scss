@@ -1778,3 +1778,12 @@
 .modal--confirm-question.active {
 	display: flex;
 }
+
+
+
+.modal--product-det {
+	.product-card__head {
+		flex-direction: column;
+		justify-content: initial;
+	}
+}

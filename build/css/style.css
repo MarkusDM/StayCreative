@@ -8409,12 +8409,8 @@ main {
       color: #DE755E; }
   .profile-password__inner {
     margin-bottom: 4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
   .profile-password__inner-left {
     margin-right: 11.5rem; }
   .profile-password__checkbox {
@@ -26150,7 +26146,10 @@ input:checked ~ .contacts__question-item-content {
               flex-direction: column;
       -webkit-box-align: initial;
           -ms-flex-align: initial;
-              align-items: initial; }
+              align-items: initial;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
     .profile-password__inner-left {
       margin-right: 0; }
     .profile-password__checkbox {

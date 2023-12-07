@@ -5584,13 +5584,16 @@ main {
   display: flex; }
 
 .modal--product-det .product-card__head {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
   -webkit-box-pack: initial;
       -ms-flex-pack: initial;
           justify-content: initial; }
+
+.modal--product-det .product-card__footer {
+  margin-top: 8rem; }
 
 .lk-register {
   margin-bottom: 15rem; }
@@ -11540,7 +11543,7 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 3.4rem;
-    height: 25.9rem; }
+    height: auto; }
   .product-card__price-license-item {
     padding-top: 2rem;
     padding-bottom: 1.7rem;
@@ -17702,7 +17705,7 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 3.4rem;
-    height: 25.9rem; }
+    height: auto; }
   .product-card__price-license-item {
     padding-top: 2rem;
     padding-bottom: 1.7rem;

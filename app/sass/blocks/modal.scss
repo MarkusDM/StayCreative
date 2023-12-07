@@ -1783,7 +1783,11 @@
 
 .modal--product-det {
 	.product-card__head {
-		flex-direction: column;
+		flex-direction: initial;
 		justify-content: initial;
+	}
+
+	.product-card__footer {
+		margin-top: 8rem;
 	}
 }

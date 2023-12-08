@@ -301,6 +301,22 @@ let dt = new DataTransfer();
 const filesInput = document.querySelector(".input-file input[type=file]");
 const inputFileLists = document.querySelector('.input-file-list');
 
+function createInputFileListItem(fileName) {
+	const inputFileListItem = document.createElement("div");
+
+	inputFileListItem.classList.add('input-file-list-item', 'input-file-list-item--d');
+
+	inputFileListItem.innerHTML = 
+		'<span class="input-file-list-name">' +
+		fileName +
+		'</span>' +
+		'<a style=" display: none;" onclick="removeFilesItem(this); return false;" class="input-file-list-remove">x</a>' +
+		'<div class="input-file-list-animation"><div class="input-file-list-animation-circle"><svg  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="svg-ops"d="M1 13C1 19.6274 6.37258 25 13 25C19.2907 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13Z" stroke="white" stroke-width="0.3" /><path class="svg-white" d="M1 13C1 19.6274 6.37258 25 13 25C19.2907 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13Z" stroke="#000" stroke-width="0.3" /></svg></div><div class="input-file-list-image"><img src="./img/inputclock.svg" alt=""></div><div>';
+
+	return inputFileListItem;
+}
+
+
 if (filesInput) {
 	filesInput.addEventListener("change", () => {
 		const files = filesInput.files;
@@ -308,29 +324,20 @@ if (filesInput) {
 		for (let i = 0; i < files.length; i++) {
 			const file = files[i];
 
-
-
-			inputFileLists.innerHTML += '<div class="input-file-list-item input-file-list-item--d">' +
-				'<span class="input-file-list-name">' +
-				file.name +
-				'</span>' +
-				'<a style=" display: none;" onclick="removeFilesItem(this); return false;" class="input-file-list-remove">x</a>' +
-				'<div class="input-file-list-animation"><div class="input-file-list-animation-circle"><svg  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="svg-ops"d="M1 13C1 19.6274 6.37258 25 13 25C19.2907 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13Z" stroke="white" stroke-width="0.3" /><path class="svg-white" d="M1 13C1 19.6274 6.37258 25 13 25C19.2907 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13Z" stroke="#000" stroke-width="0.3" /></svg></div><div class="input-file-list-image"><img src="./img/inputclock.svg" alt=""></div><div>' + '</div>';
-
 			const reader = new FileReader();
 
-			const allLists = inputFileLists.getElementsByClassName('input-file-list-item');
-			const inputFileListItem = allLists[allLists.length - 1];
-			
+			const inputFileListItem = createInputFileListItem(file.name);
 			const inputFileListRemove = inputFileListItem.querySelector('.input-file-list-remove');
 			const inputFileListAnimation = inputFileListItem.querySelector('.input-file-list-animation');
 
+			inputFileLists.appendChild(inputFileListItem);
+			
 			reader.addEventListener("load", () => {
 
 				inputFileListAnimation.style.display = 'none';
 				inputFileListItem.classList.remove('input-file-list-item--d');
 				inputFileListRemove.style.display = 'inline-block';
-				
+
 				console.log(inputFileListItem);
 			});
 
